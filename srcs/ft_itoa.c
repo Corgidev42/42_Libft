@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:25:38 by dev               #+#    #+#             */
-/*   Updated: 2024/11/13 17:29:15 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 18:45:02 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,10 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 	{
-		nb = "-2147483648";
+		nb = malloc(sizeof(char) * 12);
+		if (nb == NULL)
+			return (NULL);
+		ft_strlcpy(nb, "-2147483648", 12);
 		return (nb);
 	}
 	len = number_size(n);
