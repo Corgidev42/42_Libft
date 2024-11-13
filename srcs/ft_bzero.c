@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vincent <vincent@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:11:33 by vincent           #+#    #+#             */
-/*   Updated: 2024/11/05 15:19:47 by vincent          ###   ########.fr       */
+/*   Updated: 2024/11/12 17:20:39 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
-#include <stdio.h>
+#include "../ftlib.h"
 
 void	ft_bzero(void *s, size_t n)
 {

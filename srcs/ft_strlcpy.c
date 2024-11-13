@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vincent <vincent@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:45:33 by vincent           #+#    #+#             */
-/*   Updated: 2024/11/05 17:17:23 by vincent          ###   ########.fr       */
+/*   Updated: 2024/11/12 17:22:35 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+#include "../ftlib.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -40,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 /* #include <stdio.h>
 
-int main()
+int	main(void)
 {
 	char dest[10];
 	const char *src = "Hello, World!";
@@ -50,5 +40,5 @@ int main()
 	printf("Dest: %s\n", dest);
 	printf("Longueur source: %zu\n", result);
 
-	return 0;
+	return (0);
 } */
