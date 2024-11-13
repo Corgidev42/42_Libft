@@ -6,11 +6,11 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:48:03 by dev               #+#    #+#             */
-/*   Updated: 2024/11/12 17:22:35 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 17:29:15 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ftlib.h"
+#include "../libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

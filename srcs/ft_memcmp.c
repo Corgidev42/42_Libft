@@ -6,11 +6,11 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 11:52:55 by dev               #+#    #+#             */
-/*   Updated: 2024/11/12 17:22:35 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 17:29:15 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ftlib.h"
+#include "../libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

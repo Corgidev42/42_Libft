@@ -6,11 +6,11 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:54:57 by dev               #+#    #+#             */
-/*   Updated: 2024/11/12 17:27:51 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 17:29:15 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ftlib.h"
+#include "../libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

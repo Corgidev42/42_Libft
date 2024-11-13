@@ -2,3 +2,6 @@
 *.o
 # Subject files
 *.subject.pdf
+
+#Executable
+*.out
