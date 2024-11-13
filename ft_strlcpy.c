@@ -1,45 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 16:59:44 by vincent           #+#    #+#             */
-/*   Updated: 2024/11/13 17:29:15 by dev              ###   ########.fr       */
+/*   Created: 2024/11/05 16:45:33 by vincent           #+#    #+#             */
+/*   Updated: 2024/11/13 19:23:45 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	while (*s)
+	size_t	i;
+
+	i = 0;
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (i < dstsize - 1 && src[i])
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		dst[i] = src[i];
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
 
 /* #include <stdio.h>
 
 int	main(void)
 {
-	const char *str = "Hello, world!";
-	char *result = ft_strchr(str, 'H');
+	char dest[10];
+	const char *src = "Hello, World!";
 
-	if (result != NULL)
-	{
-		printf("Première occurrence : %ld\n", result - str);
-	}
-	else
-	{
-		printf("'o' n'est pas présent dans la chaîne.\n");
-	}
+	size_t result = ft_strlcpy(dest, src, sizeof(dest));
+
+	printf("Dest: %s\n", dest);
+	printf("Longueur source: %zu\n", result);
 
 	return (0);
 } */

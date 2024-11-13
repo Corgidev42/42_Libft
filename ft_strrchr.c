@@ -6,11 +6,11 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:00:43 by vincent           #+#    #+#             */
-/*   Updated: 2024/11/13 18:54:17 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 19:23:44 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

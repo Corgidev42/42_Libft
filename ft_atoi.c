@@ -6,11 +6,11 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:43:48 by dev               #+#    #+#             */
-/*   Updated: 2024/11/13 17:29:15 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 19:23:45 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 //     const char *str1 = "12345";
 //     const char *str2 = "-42";
 //     const char *str3 = "  123abc";
-	// Les caractères après les chiffres sont ignorés
+// Les caractères après les chiffres sont ignorés
 
 //     int num1 = ft_atoi(str1);
 //     int num2 = ft_atoi(str2);

@@ -6,11 +6,11 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:55:16 by dev               #+#    #+#             */
-/*   Updated: 2024/11/13 17:41:54 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 19:34:32 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 int	ft_c_is_charset(char c, char *charset)
 {
@@ -54,6 +54,19 @@ int	ft_word_len(const char *s, char *c)
 	return (len);
 }
 
+void free_all (char **result, int i)
+{
+	int	j;
+
+	j = 0;
+	while (j < i)
+	{
+		free(result[j]);
+		j++;
+	}
+	free(result);
+}
+
 char	**ft_split(const char *s, char *c)
 {
 	int		i;
@@ -61,8 +74,7 @@ char	**ft_split(const char *s, char *c)
 	int		k;
 	char	**result;
 
-	if (!s || !c || !(result = malloc(sizeof(char *) * (ft_word_count(s, c)
-					+ 1))))
+	if (!s || !c || !(result = malloc(sizeof(char *) * (ft_word_count(s, c) + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -73,9 +85,8 @@ char	**ft_split(const char *s, char *c)
 		if (s[i])
 		{
 			k = 0;
-			if (!(result[j] = malloc(sizeof(char) * (ft_word_len(s + i, c)
-							+ 1))))
-				return (NULL);
+			if (!(result[j] = malloc(sizeof(char) * (ft_word_len(s + i, c)+ 1))))
+				return (free_all(result, j), NULL);
 			while (s[i] && !ft_c_is_charset(s[i], c))
 				result[j][k++] = s[i++];
 			result[j++][k] = '\0';

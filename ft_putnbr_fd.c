@@ -6,11 +6,11 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:44:35 by dev               #+#    #+#             */
-/*   Updated: 2024/11/13 17:41:36 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 19:23:45 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 #include <limits.h>
 
 void	ft_putnbr_fd(int n, int fd)

@@ -1,10 +1,8 @@
 #Variables
-CC = gcc
-SRC_DIR = srcs
-INC_DIR = includes
-SRCS = $(wildcard $(SRC_DIR)/*.c)
+CC = cc
+SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
-CFLAGS = -Wall -Wextra -Werror -I$(INC_DIR)
+CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
 #par defaut

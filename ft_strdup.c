@@ -1,53 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 18:59:02 by dev               #+#    #+#             */
-/*   Updated: 2024/11/13 17:29:15 by dev              ###   ########.fr       */
+/*   Created: 2024/11/10 19:14:03 by dev               #+#    #+#             */
+/*   Updated: 2024/11/13 19:23:45 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
-	char	*tab;
+	char	*s2;
+	int		i;
 
-	tab = malloc(count * size);
-	if (tab == NULL)
-		return (NULL);
 	i = 0;
-	while (i < count * size)
+	s2 = malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (s2 == NULL)
+		return (NULL);
+	while (s1[i])
 	{
-		tab[i] = 0;
+		s2[i] = s1[i];
 		i++;
 	}
-	return ((void *)tab);
+	s2[i] = '\0';
+	return (s2);
 }
 
 // int	main(void)
 // {
-// 	int		*arr;
-// 	size_t	num_elements;
+// 	const char	*original;
+// 	char		*copy;
 
-// 	num_elements = 5;
-//
-// 	arr = (int *)ft_calloc(num_elements, sizeof(int));
-// 	if (arr == NULL)
+// 	original = "Hello, World!";
+// 	copy = ft_strdup(original);
+// 	if (copy == NULL)
 // 	{
 // 		printf("Erreur d'allocation mémoire.\n");
 // 		return (1);
 // 	}
-//
-// 	for (size_t i = 0; i < num_elements; i++)
-// 	{
-// 		printf("arr[%zu] = %d\n", i, arr[i]);
-// 	}
-//
-// 	free(arr);
+// 	printf("Original: %s\n", original);
+// 	printf("Copy: %s\n", copy);
+// 	free(copy);
 // 	return (0);
 // }

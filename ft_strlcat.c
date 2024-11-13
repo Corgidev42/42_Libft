@@ -1,44 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 16:45:33 by vincent           #+#    #+#             */
-/*   Updated: 2024/11/13 17:29:15 by dev              ###   ########.fr       */
+/*   Created: 2024/11/05 16:45:35 by vincent           #+#    #+#             */
+/*   Updated: 2024/11/13 19:23:45 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	dstlen;
+	size_t	j;
 
-	i = 0;
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	while (i < dstsize - 1 && src[i])
+	dstlen = ft_strlen(dst);
+	if (dstsize == 0 || dstlen >= dstsize)
+		return (dstsize + ft_strlen(src));
+	i = dstlen;
+	j = 0;
+	while (i < dstsize - 1 && src[j])
 	{
-		dst[i] = src[i];
+		dst[i] = src[j];
 		i++;
+		j++;
 	}
 	dst[i] = '\0';
-	return (ft_strlen(src));
+	return (dstlen + ft_strlen(src));
 }
-
 /* #include <stdio.h>
 
-int	main(void)
+int main()
 {
-	char dest[10];
-	const char *src = "Hello, World!";
+	char dest[20] = "Hello";
+	const char *src = ", World!";
 
-	size_t result = ft_strlcpy(dest, src, sizeof(dest));
+	size_t result = ft_strlcat(dest, src, 20);
 
 	printf("Dest: %s\n", dest);
-	printf("Longueur source: %zu\n", result);
+	printf("Longueur totale: %zu\n", result);
 
-	return (0);
-} */
+	return 0;
+}
+ */
