@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:45:00 by dev               #+#    #+#             */
-/*   Updated: 2024/11/13 17:39:22 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/13 18:00:37 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	str = malloc(sizeof(char) * len + 1);
+	if (start == 0 || len == 0)
+		return (str);
 	i = 0;
 	while (i < len && s[i])
 	{
