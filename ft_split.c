@@ -6,24 +6,13 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:55:16 by dev               #+#    #+#             */
-/*   Updated: 2024/11/13 19:34:32 by dev              ###   ########.fr       */
+/*   Updated: 2024/11/14 14:47:50 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_c_is_charset(char c, char *charset)
-{
-	while (*charset)
-	{
-		if (c == *charset)
-			return (1);
-		charset++;
-	}
-	return (0);
-}
-
-int	ft_word_count(const char *s, char *c)
+int	ft_word_count(const char *s, char c)
 {
 	int	count;
 	int	i;
@@ -32,29 +21,29 @@ int	ft_word_count(const char *s, char *c)
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] && ft_c_is_charset(s[i], c))
+		while (s[i] && s[i] == c)
 			i++;
-		if (s[i] && !ft_c_is_charset(s[i], c))
+		if (s[i])
 		{
 			count++;
-			while (s[i] && !ft_c_is_charset(s[i], c))
+			while (s[i] && !(s[i] == c))
 				i++;
 		}
 	}
 	return (count);
 }
 
-int	ft_word_len(const char *s, char *c)
+int	ft_word_len(const char *s, char c)
 {
 	int	len;
 
 	len = 0;
-	while (s[len] && !ft_c_is_charset(s[len], c))
+	while (s[len] && !(s[len] == c))
 		len++;
 	return (len);
 }
 
-void free_all (char **result, int i)
+void	free_all(char **result, int i)
 {
 	int	j;
 
@@ -65,33 +54,33 @@ void free_all (char **result, int i)
 		j++;
 	}
 	free(result);
+	return ;
 }
 
-char	**ft_split(const char *s, char *c)
+char	**ft_split(const char *s, char c)
 {
-	int		i;
-	int		j;
-	int		k;
 	char	**result;
+	int		i;
+	int		word_count;
 
-	if (!s || !c || !(result = malloc(sizeof(char *) * (ft_word_count(s, c) + 1))))
+	word_count = ft_word_count(s, c);
+	result = malloc(sizeof(char *) * (word_count + 1));
+	if (!result)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (i < word_count)
 	{
-		while (s[i] && ft_c_is_charset(s[i], c))
-			i++;
-		if (s[i])
+		while (*s == c)
+			s++;
+		result[i] = ft_substr(s, 0, ft_word_len(s, c));
+		if (!result[i])
 		{
-			k = 0;
-			if (!(result[j] = malloc(sizeof(char) * (ft_word_len(s + i, c)+ 1))))
-				return (free_all(result, j), NULL);
-			while (s[i] && !ft_c_is_charset(s[i], c))
-				result[j][k++] = s[i++];
-			result[j++][k] = '\0';
+			free_all(result, i);
+			return (NULL);
 		}
+		s += ft_word_len(s, c);
+		i++;
 	}
-	result[j] = NULL;
+	result[i] = NULL;
 	return (result);
 }
