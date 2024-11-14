@@ -5,3 +5,6 @@
 
 #Executable
 *.out
+
+# text file
+*.txt
