@@ -1,7 +1,5 @@
 # Object files
 *.o
-# Subject files
-*.subject.pdf
 
 #Executable
 *.out
