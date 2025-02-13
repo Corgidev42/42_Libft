@@ -6,7 +6,7 @@
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:05:28 by dev               #+#    #+#             */
-/*   Updated: 2025/02/13 11:16:43 by vbonnard         ###   ########.fr       */
+/*   Updated: 2025/02/13 13:02:40 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ int					ft_atoi(const char *str);
 
 /**
 
-	* Remplit les n premiers octets de la zone mémoire pointée par s avec des zéros.
+	* Remplit les n premiers octets de la
+		zone mémoire pointée par s avec des zéros.
  *
  * @param s La zone mémoire à remplir.
  * @param n Le nombre d'octets à remplir.
@@ -43,7 +44,8 @@ void				ft_bzero(void *s, size_t n);
 
 /**
 
-	* Alloue de la mémoire pour un tableau de count éléments de taille size chacun et initialise tous les octets à zéro.
+	* Alloue de la mémoire pour un tableau de count
+		éléments de taille size chacun et initialise tous les octets à zéro.
  *
  * @param count Le nombre d'éléments.
  * @param size La taille de chaque élément.
@@ -190,7 +192,8 @@ int					ft_lstsize(t_list *lst);
 
 /**
 
-	* @brief Recherche la première occurrence du caractère c dans les n premiers octets de la zone mémoire pointée par s.
+	* @brief Recherche la première occurrence du caractère c
+		dans les n premiers octets de la zone mémoire pointée par s.
  *
  * @param s Pointeur vers la zone mémoire à examiner.
  * @param c Caractère à rechercher.
@@ -201,7 +204,8 @@ int					ft_lstsize(t_list *lst);
 void				*ft_memchr(const void *s, int c, size_t n);
 
 /**
- * @brief Compare les n premiers octets des zones mémoire pointées par s1 et s2.
+ * @brief Compare les n premiers octets des
+ * 	zones mémoire pointées par s1 et s2.
  *
  * @param s1 Pointeur vers la première zone mémoire.
  * @param s2 Pointeur vers la deuxième zone mémoire.
@@ -224,7 +228,8 @@ void				*ft_memcpy(void *dst, const void *src, size_t n);
 
 /**
 
-	* @brief Déplace n octets de la zone mémoire src vers la zone mémoire dst. Les zones peuvent se chevaucher.
+	* @brief Déplace n octets de la zone mémoire src vers
+		la zone mémoire dst. Les zones peuvent se chevaucher.
  *
  * @param dst Pointeur vers la zone mémoire de destination.
  * @param src Pointeur vers la zone mémoire source.
@@ -235,7 +240,8 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 
 /**
 
-	* @brief Remplit les n premiers octets de la zone mémoire pointée par ptr avec la valeur spécifiée.
+	* @brief Remplit les n premiers octets de la zone
+		mémoire pointée par ptr avec la valeur spécifiée.
  *
  * @param ptr Pointeur vers la zone mémoire à remplir.
  * @param value Valeur à utiliser pour remplir la zone mémoire.
@@ -254,7 +260,8 @@ void				ft_putchar_fd(char c, int fd);
 
 /**
 
-	* @brief Écrit la chaîne de caractères s suivie d'un retour à la ligne dans le descripteur de fichier fd.
+	* @brief Écrit la chaîne de caractères s suivie
+		d'un retour à la ligne dans le descripteur de fichier fd.
  *
  * @param s Chaîne de caractères à écrire.
  * @param fd Descripteur de fichier.
@@ -279,7 +286,8 @@ void				ft_putstr_fd(char *s, int fd);
 
 /**
 
-	* @brief Divise la chaîne de caractères s en sous-chaînes en utilisant le caractère c comme délimiteur.
+	* @brief Divise la chaîne de caractères s en
+		sous-chaînes en utilisant le caractère c comme délimiteur.
  *
  * @param s Chaîne de caractères à diviser.
  * @param c Caractère délimiteur.
@@ -304,8 +312,9 @@ char				*ft_strchr(const char *s, int c);
  * @brief Duplique une chaîne de caractères.
  *
 
-	* Cette fonction alloue suffisamment de mémoire pour copier la chaîne de caractères
- * passée en argument, puis copie cette chaîne dans la mémoire allouée.
+	* Cette fonction alloue suffisamment de
+		mémoire pour copier la chaîne de caractères passée
+			en argument, puis copie cette chaîne dans la mémoire allouée.
  *
  * @param s1 La chaîne de caractères à dupliquer.
  * @return Un pointeur vers la nouvelle chaîne de caractères dupliquée,
@@ -341,15 +350,19 @@ void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
 /**
 
-	* @brief Concatène deux chaînes de caractères en tenant compte de la taille du buffer de destination.
+	* @brief Concatène deux chaînes de caractères
+		en tenant compte de la taille du buffer de destination.
  *
 
-	* Cette fonction ajoute la chaîne source (src) à la fin de la chaîne de destination (dst) en s'assurant
+	* Cette fonction ajoute la chaîne source (src) à
+		la fin de la chaîne de destination (dst) en s'assurant
 
-	* que la taille totale du buffer de destination (dstsize) n'est pas dépassée. La chaîne de destination
- * résultante sera toujours terminée par un caractère nul ('\0'),
-	sauf si dstsize est 0 ou si la longueur
- * de la chaîne de destination initiale est supérieure ou égale à dstsize.
+	* que la taille totale du buffer de destination (dstsize)
+		n'est pas dépassée. La chaîne de destination
+ * 			résultante sera toujours terminée par un caractère nul ('\0'),
+				sauf si dstsize est 0 ou si la longueur
+ * 					de la chaîne de destination initiale est
+ 						supérieure ou égale à dstsize.
  *
  * @param dst La chaîne de destination.
  * @param src La chaîne source à ajouter à la chaîne de destination.
@@ -357,10 +370,10 @@ char				*ft_strjoin(char const *s1, char const *s2);
 	y compris l'espace pour le caractère nul.
  * @return La longueur totale de la chaîne qu'elle a essayé de créer,
 	c'est-à-dire la longueur initiale de dst
-
-	*         plus la longueur de src. Si la valeur retournée est supérieure ou égale à dstsize,
-	cela signifie
- *         que la chaîne a été tronquée.
+		plus la longueur de src.
+			Si la valeur retournée est supérieure ou égale à dstsize,
+				cela signifie
+ *					que la chaîne a été tronquée.
  */
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 /**
@@ -373,8 +386,9 @@ size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
  * @param src      La chaîne source à copier.
  * @param dstsize  La taille du buffer de destination.
 
-	* @return         La longueur totale de la chaîne que la fonction a essayé de créer,
- *                 c'est-à-dire la longueur de src.
+	* @return		La longueur totale de la
+		chaîne que la fonction a essayé de créer,
+			c'est-à-dire la longueur de src.
  */
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 /**
@@ -391,29 +405,32 @@ size_t				ft_strlen(const char *s);
 /**
  * ft_strmapi
 	- Applique une fonction à chaque caractère d'une chaîne de caractères
-
-	*              pour créer une nouvelle chaîne de caractères résultant des applications successives.
+		pour créer une nouvelle chaîne de caractères
+			résultant des applications successives.
  *
  * @param s: La chaîne de caractères sur laquelle itérer.
- * @param f: La fonction à appliquer à chaque caractère. Elle prend en paramètre
- *           l'index du caractère et le caractère lui-même,
+ * @param f: La fonction à appliquer à chaque caractère.
+ * 	Elle prend en paramètre
+ *	l'index du caractère et le caractère lui-même,
 	et retourne le nouveau caractère.
  *
 
-	* @return: Une nouvelle chaîne de caractères résultant des applications successives
-
-	*          de la fonction 'f' sur chaque caractère de 's'. Retourne NULL si l'allocation
- *          de mémoire échoue.
+	* @return: Une nouvelle chaîne de caractères
+		résultant des applications successives
+			de la fonction 'f' sur chaque caractère de 's'.
+				Retourne NULL si l'allocation
+					de mémoire échoue.
  */
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /**
  * @brief Compare les deux chaînes de caractères s1 et s2 jusqu'à n caractères.
  *
 
-	* Cette fonction compare les deux chaînes de caractères s1 et s2 jusqu'à un maximum
- * de n caractères. Elle retourne un entier inférieur,
-	égal ou supérieur à zéro si
- * s1 est respectivement inférieure, égale ou supérieure à s2.
+	* Cette fonction compare les deux chaînes
+		de caractères s1 et s2 jusqu'à un maximum
+			de n caractères. Elle retourne un entier inférieur,
+				égal ou supérieur à zéro si
+ 					s1 est respectivement inférieure, égale ou supérieure à s2.
  *
  * @param s1 La première chaîne de caractères à comparer.
  * @param s2 La deuxième chaîne de caractères à comparer.
@@ -424,9 +441,10 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 /**
 
-	* @brief Trouve la première occurrence de la sous-chaîne 'needle' dans la chaîne 'haystack',
-
-	*        en ne recherchant que dans les 'len' premiers caractères de 'haystack'.
+	* @brief Trouve la première occurrence de la
+		sous-chaîne 'needle' dans la chaîne 'haystack',
+			en ne recherchant que dans les 'len'
+				premiers caractères de 'haystack'.
  *
  * @param haystack La chaîne dans laquelle rechercher.
  * @param needle La sous-chaîne à rechercher.
@@ -447,8 +465,9 @@ char				*ft_strnstr(const char *haystack, const char *needle,
  * @param s La chaîne de caractères dans laquelle chercher.
  * @param c Le caractère à rechercher.
 
-	* @return Un pointeur sur la dernière occurrence du caractère 'c' dans la chaîne 's',
- *         ou NULL si le caractère n'est pas trouvé.
+	* @return Un pointeur sur la dernière occurrence
+		du caractère 'c' dans la chaîne 's',
+ *			ou NULL si le caractère n'est pas trouvé.
  */
 char				*ft_strrchr(const char *s, int c);
 /**
@@ -462,7 +481,8 @@ char				*ft_strrchr(const char *s, int c);
  * Si l'allocation échoue, la fonction retourne NULL.
  *
 
-	* Retourne: Une nouvelle chaîne de caractères trimmée ou NULL si l'allocation échoue.
+	* Retourne: Une nouvelle chaîne de caractères
+		trimmée ou NULL si l'allocation échoue.
  */
 char				*ft_strtrim(char const *s1, char const *set);
 /**
