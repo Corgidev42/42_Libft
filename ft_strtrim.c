@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:30:08 by dev               #+#    #+#             */
-/*   Updated: 2024/11/13 19:38:53 by dev              ###   ########.fr       */
+/*   Updated: 2025/02/13 11:15:18 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	is_set(char c, const char *set)
 	}
 	return (0);
 }
+
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
